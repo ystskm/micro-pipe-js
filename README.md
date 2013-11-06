@@ -21,7 +21,7 @@ Install with [npm](http://github.com/isaacs/npm):
     var micropipe = require('micro-pipe');
     micropipe(function(next){ console('a'), next('b')}
               ,function(v, next){ console(v == 'b'), next('c')}
-              ,function(v, next){ console(v == 'c')}); // => 'a', true, true
+              ,function(v){ console(v == 'c')}); // => 'a', true, true
 
 ## API - Path functions by array
 
