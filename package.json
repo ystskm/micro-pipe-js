@@ -1,0 +1,22 @@
+{
+  "name": "micro-pip",
+  "version": "0.1.0",
+  "author": {
+    "name": "Yoshitaka Sakamoto",
+    "url": "http://github.com/ystskm",
+    "email": "sakamoto@liberty-technology.biz"
+  },
+  "contributors": [],
+  "dependencies": {},
+  "description": "A small utility for async pipe",
+  "devDependencies": {},
+  "keywords": ["util","async","pipe","chain","function"],
+  "main": "index.js",
+  "repository": {
+    "url": "http://github.com/ystskm/node-localelist",
+    "type": "git"
+  },
+  "scripts": {
+    "test": "node test/_runner.js"
+  }
+}
