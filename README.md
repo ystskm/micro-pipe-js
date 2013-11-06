@@ -9,21 +9,21 @@ Install with [npm](http://github.com/isaacs/npm):
 
     npm install micro-pipe
     
-## API - Path functions by args
+## API - Set functions by args
 
     var micropipe = require('micro-pipe');
     micropipe(function(next){ console('a'), next()}
               ,function(next){ console('b'), next()}
               ,function(){ console('c')}); // => 'a', 'b', 'c'
 
-### - pass to next
+### - return value to next
 
     var micropipe = require('micro-pipe');
     micropipe(function(next){ console('a'), next('b')}
               ,function(v, next){ console(v == 'b'), next('c')}
               ,function(v){ console(v == 'c')}); // => 'a', true, true
 
-### - pass functions by array
+### - set functions by array
 
     var micropipe = require('micro-pipe');
     var fns = [];
