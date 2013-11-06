@@ -16,14 +16,14 @@ Install with [npm](http://github.com/isaacs/npm):
               ,function(next){ console('b'), next()}
               ,function(){ console('c')}); // => 'a', 'b', 'c'
 
-## API - Path to next
+### - pass to next
 
     var micropipe = require('micro-pipe');
     micropipe(function(next){ console('a'), next('b')}
               ,function(v, next){ console(v == 'b'), next('c')}
               ,function(v){ console(v == 'c')}); // => 'a', true, true
 
-## API - Path functions by array
+### - pass functions by array
 
     var micropipe = require('micro-pipe');
     var fns = [];
