@@ -1,4 +1,4 @@
-# micro
+# micro-pipe
 
 Support for making functions pipeline. Only 549 byte raw file.
 You can use this both node and browsers.
