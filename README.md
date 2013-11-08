@@ -5,7 +5,7 @@ You can use this both node and browsers.
 
 ## Install
 
-Install with [npm](http://github.com/isaacs/npm):
+Install with [npm](http://npmjs.org/):
 
     npm install micro-pipe
     
