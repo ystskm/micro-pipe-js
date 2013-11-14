@@ -7,9 +7,12 @@
     "email": "sakamoto@liberty-technology.biz"
   },
   "contributors": [],
-  "dependencies": {},
   "description": "A small utility for async pipe",
-  "devDependencies": {},
+  "dependencies": {},
+  "devDependencies": {
+    "nodeunit": "*",
+    "nodeunit-ci": "*"
+  },
   "keywords": ["util","async","pipe","chain","function"],
   "main": "micro-pipe.js",
   "repository": {
