@@ -18,10 +18,10 @@
 
     var idx = 0;
     var opts = isFunction(actors.slice(-1)[0]) ? {}: actors.pop();
+    var self = opts.self || this;
     return next();
 
     function next() {
-      var self = opts.self || next.self || this;
       var timer, actor = actors.shift(), args = casting(arguments);
       if(!isFunction(actor)) return Promise.resolve(args);
       return new Promise(function(rsl, rej) {
@@ -37,14 +37,15 @@
 
           // User calls this function with arguments given to next.
           clearTimeout(timer);
-          rsl([this, arguments]);
+          rsl(arguments);
 
         };
         _next.index = idx;
         _next.options = opts;
+        _next.reject = rej;
         actor.apply(self, args.concat(_next));
-      }).then(function(pair) {
-        return idx++, next.apply(pair[0], pair[1]);
+      }).then(function(args) {
+        return idx++, next.apply(null, args);
       });
     }
 
