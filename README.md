@@ -31,8 +31,8 @@ Install with [npm](http://npmjs.org/):
     var fns = [];
     fns.push(function(next){ console('a'), next()});
     fns.push(function(next){ console('b'), next()});
-    fns.push(function(){ console('c')})
-    micropipe(fns); // => 'a', 'b', 'c'
+    fns.push(function(next){ console('c'), next(1,2,3)});
+    micropipe(fns).then(function(args){ console.log(args); }); // => 'a', 'b', 'c', [1, 2, 3]
 
 ### also use on browser
 
@@ -42,7 +42,8 @@ Install with [npm](http://npmjs.org/):
 
     micropipe(function(next){ console('x'), next()}
               ,function(next){ console('y'), next()}
-              ,function(){ console('z')}); // => 'x', 'y', 'z'
+              ,function(next){ console('z'), next(1,2,3)})
+              .then(function(args){ console.log(args); }); // => 'x', 'y', 'z', [1, 2, 3]
 
 </script>
 ```
