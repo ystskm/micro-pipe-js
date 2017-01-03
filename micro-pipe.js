@@ -23,7 +23,7 @@
     function next() {
       var self = opts.self || next.self || this;
       var timer, actor = actors.shift(), args = casting(arguments);
-      if(!isFunction(actor)) return Promise.resolve();
+      if(!isFunction(actor)) return Promise.resolve(args);
       return new Promise(function(rsl, rej) {
         var _next;
         if(opts.timeout) {
