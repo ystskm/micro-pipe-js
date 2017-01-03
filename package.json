@@ -19,10 +19,11 @@
     "url": "http://github.com/ystskm/node-localelist",
     "type": "git"
   },
-  "license": {
+  "license": "MIT",
+  "licenses": [{
       "type": "MIT License",
       "url": "https://github.com/ystskm/node-localelist/blob/master/LICENSE"
-  },
+  }],
   "engine": {
     "node": ">=0.12.0"
   },
