@@ -20,7 +20,7 @@
     "type": "git"
   },
   "license": {
-      "type": "MIT",
+      "type": "MIT License",
       "url": "https://github.com/ystskm/node-localelist/blob/master/LICENSE"
   },
   "engine": {
